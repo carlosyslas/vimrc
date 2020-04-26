@@ -16,6 +16,8 @@ set incsearch
 set laststatus=2
 set termguicolors
 
+let mapleader = " "
+
 set colorcolumn=90
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
@@ -23,7 +25,10 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 call plug#begin()
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 call plug#end()
 
