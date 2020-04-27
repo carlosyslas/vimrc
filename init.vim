@@ -23,7 +23,7 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 
 call plug#begin()
-Plug 'dracula/vim',{'as':'dracula'}
+Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -32,8 +32,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 call plug#end()
 
-colorscheme dracula
-let g:lightline = { 'colorscheme': 'dracula' }
+colorscheme gruvbox
+
+nmap <leader>o <plug>(fzf-maps-n)
 
 " Coc config
 let g:coc_global_extensions = [
